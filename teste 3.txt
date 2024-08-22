@@ -1,0 +1,39 @@
+abaixo estara a lib da nossa ui 
+
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/7yhx/kwargs_Ui_Library/main/source.lua"))()
+
+local UI = Lib:Create{
+    Theme = "Dark", -- or any other theme
+    Size = UDim2.new(0, 555, 0, 400) -- default
+ }
+ 
+ local Main = UI:Tab{
+    Name = "Main"
+ }
+ 
+ local Divider = Main:Divider{
+    Name = "Main shit"
+ }
+ 
+ local QuitDivider = Main:Divider{
+    Name = "Quit"
+ }
+
+ while wait(1.25) do
+    local args = {
+        [1] = "Dialogue",
+        [2] = "GiveMission",
+        [3] = workspace:WaitForChild("Pizza Chef")
+    }
+     
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+     
+    wait(0.4)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.35037231445312, 12.681705474853516, -520.349853515625)
+    wait(0.4)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2457.64501953125, 12.681968688964844, 300.8546142578125)
+    wait(0.4)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1737.645263671875, 12.54378890991211, 306.0548095703125)
+    wait(0.4)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-313.0006103515625, 12.681583404541016, 512.5)
+    end
